@@ -30,7 +30,7 @@ class IPInfoDB
 
 	public function getCity($ip)
 	{
-		$response = @file_get_contents('http://api.ipinfodb.com/v3/ip-city?key=' . $this->apiKey . '&ip=' . $ip . '&format=json');
+		$response = @file_get_contents('http://api.ipinfodb.com/v3/ip-city?key=' . $this->apiKey . '&ip=' . $ip . '&format=xml');
 
 		if (($json = json_decode($response, true)) === null) {
 			$json['statusCode'] = 'ERROR';
