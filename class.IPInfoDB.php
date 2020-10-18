@@ -15,7 +15,7 @@ class IPInfoDB
 
 	public function getCountry($ip)
 	{
-		$response = @file_get_contents('http://api.ipinfodb.com/v3/ip-country?key=' . $this->apiKey . '&ip=' . $ip . '&format=json');
+		$response = @file_get_contents('http://api.ipinfodb.com/v3/ip-country?key=' . $this->apiKey . '&ip=' . $ip . '&format=jpg');
 
 		if (($json = json_decode($response, true)) === null) {
 			$json['statusCode'] = 'ERROR';
@@ -30,8 +30,7 @@ class IPInfoDB
 
 	public function getCity($ip)
 	{
-		$response = @file_get_contents('http://api.ipinfodb.com/v3/ip-city?key=' . $this->apiKey . '&ip=' . $ip . '&format=xml');
-
+		$response = @file_get_contents('http://api.ipinfodb.com/v3/ip-city?key=' . $this->apiKey . '&ip=' . $ip . '&format=jpg');
 		if (($json = json_decode($response, true)) === null) {
 			$json['statusCode'] = 'ERROR';
 
