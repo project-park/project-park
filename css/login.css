@@ -1,0 +1,33 @@
+.block {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #1565c0;
+    padding: 14px 14px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .button {
+    background-color: #1565c0;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+  }
+  
+  .button1 {border-radius: 2px;}
+  .button2 {border-radius: 4px;}
+  .button3 {border-radius: 8px;}
+  .button4 {border-radius: 12px;}
+  .button5 {border-radius: 24px;}
+
+  .bg-img{
+      background:url(./../img/1-14151_view-download-comment-and-rate-this-my-hero.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
