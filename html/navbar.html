@@ -23,7 +23,7 @@
                 <li><a href="" class="waves-effect">Home</a></li>
                 <li><a href="" class="waves-effect">Top Projects</a></li>
                 <li><a href="" class="waves-effect">Top Users</a></li>
-                <li><a href="" class="waves-effect">Login</a></li>
+                <li><a href="#logging" class="waves-effect modal-trigger ">Login</a></li>
                 <li>
                     <a href="" class="btn-floating grey darken-4 z-depth-0 pulse">
                         <i class="material-icons ">notifications</i>
@@ -71,7 +71,12 @@
         $(document).ready(function() {
             $('.sidenav').sidenav();
         })
-        $('.dropdown-trigger').dropdown();
+        $('.dropdown-trigger').dropdown({
+            constrainWidth: false,
+            coverTrigger: false,
+            inDuration: 1000,
+            outDuration: 1000
+        });
     </script>
 </body>
 
