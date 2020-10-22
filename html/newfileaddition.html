@@ -10,30 +10,37 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="nav-wrapper grey darken-2">
-            <a class="brand-logo center">PROJECT PARK</a>
-        </div>
-    </nav>
-    <br><br>
-    <div class="container">
-        <div class="row">
-            <div class="col s12">
-                Directory-name/Dummy-name
-                <div class="input-field inline">
-                    <input id="add-file-name" type="text">
-                    <label for="add-file-name">Add file name</label>
+    <div class="container center-align">
+        <h2>Dummy Project Name</h2>
+    </div>
+    <form action="savefile.php" method="POST">
+        <div class="container">
+            <h5>Directory in which this file will be saved</h5>
+            <p>dummyproject1/html/v5/</p>
+            <div class="row">
+                <div class="input-field" style="width:30%">
+                    <input id="add-file-name" type="text" data-length="20">
+                    <label for="add-file-name">Add File Name</label>
                 </div>
             </div>
+            <p class="flow-text">Add code below</p>
+            <div class="input-field">
+                <textarea id="new_code" class="materialize-textarea" name="new_code" placeholder="Sample HTML Code"></textarea>
+            </div>
+            <input class="btn green" type="submit" name="submit" value="Add File">
+            <a href="#" class="btn red">Cancel</a>
         </div>
-        <p>Add code below</p>
-        <label>Your code</label>
-        <textarea rows="50" cols="20" name="new_code"></textarea>
-        <br><br>
-        <button class="btn waves-effect waves-light button1">add file</button>
-        <button class="btn waves-effect waves-light red darken-4 button1">cancel</button>
+    </form>
 
-    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('input#add-file-name').characterCounter();
+        });
+    </script>
 </body>
 
 </html>

@@ -6,58 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Compiled and minified CSS -->
     <!--Import Google Icon Font-->
-    <style>
-        .block {
-            display: block;
-            width: 100%;
-            border: none;
-            background-color: #15afc0;
-            padding: 0px 0px;
-            font-size: 16px;
-            cursor: pointer;
-            text-align: center;
-        }
-        
-        .button {
-            background-color: #1565c0;
-            border: none;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 2px 2px;
-        }
-        
-        .button1 {
-            border-radius: 2px;
-        }
-        
-        .button2 {
-            border-radius: 4px;
-        }
-        
-        .button3 {
-            border-radius: 8px;
-        }
-        
-        .button4 {
-            border-radius: 12px;
-        }
-        
-        .button5 {
-            border-radius: 24px;
-        }
-        
-        .bg-img {
-            background: url(C:\xampp\htdocs\project-park\img\hero.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-    </style>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./../css/navbar.css">
     <title>materialize css</title>
 </head>
 
@@ -65,23 +17,23 @@
 
     <nav class="nav-wraper blue-grey darken-3">
         <div class="container">
-            <a href="" class="brand-logo">Project Park</a>
+            <a href="#" class="brand-logo">Project Park</a>
             <a href="#" class="sidenav-trigger" data-target="mobile-links">
                 <i class="material-icons">menu</i>
             </a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="" class="waves-effect">Home</a></li>
-                <li><a href="" class="waves-effect">Top Projects</a></li>
-                <li><a href="" class="waves-effect">Top Users</a></li>
-                <li><a href="#logging" class="waves-effect modal-trigger ">Login</a></li>
+                <li><a href="#" class="waves-effect">Home</a></li>
+                <li><a href="#" class="waves-effect">Top Projects</a></li>
+                <li><a href="#" class="waves-effect">Top Users</a></li>
+                <li><a href="#logging" class="waves-effect modal-trigger">Login</a></li>
                 <li>
-                    <a href="" class="btn-floating grey darken-4 z-depth-0 pulse">
+                    <a href="#" class="btn-floating grey darken-4 z-depth-0 pulse">
                         <i class="material-icons ">notifications</i>
                     </a>
                 </li>
                 <li>
-                    <a href="" class="btn-floating grey darken-4  z-depth-0">
-                        <i class="material-icons yellow-text text-lighten-2">person</i>
+                    <a href="#" class="btn-floating grey darken-4  z-depth-0">
+                        <i class="material-icons">person</i>
                     </a>
                 </li>
                 <li>
@@ -94,58 +46,43 @@
     </nav>
 
     <ul class="sidenav" id="mobile-links">
-        <li><a href="">Login</a></li>
-        <li><a href="">Notifications</a></li>
-        <li><a href="">Home</a></li>
-        <li><a href="">Top Projects</a></li>
-        <li><a href="">Top Users</a></li>
-        <li><a href="">Your profile</a></li>
-        <li><a href="">Help</a></li>
-        <li><a href="">Settings</a></li>
-        <li><a href="">Log out</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Top Projects</a></li>
+        <li><a href="#">Top Users</a></li>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Notifications</a></li>
+        <li><a href="#">Your profile</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Log out</a></li>
     </ul>
 
     <ul class="dropdown-content" id="dropdown1">
-        <li><a href="">Your profile</a></li>
-        <li><a href="">Help</a></li>
-        <li><a href="">Settings</a></li>
-        <li><a href="">Log out</a></li>
+        <li><a href="#">Your profile</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Log out</a></li>
     </ul>
 
     <div class="modal" id="logging">
-        <div class="modal-content">
-            <div class="container" style="width: 100%; ">
-                <div class="z-depth-2">
-                    <div class="card">
-                        <div class="card-panel bg-img hoverable">
-                            <div class="card-content">
-                                <span class="card-title center-align"><b>LOG IN</b></span>
-                                <form action="action_page.php" method="post">
-
-                                    <div class="container">
-                                        <div class="input-field col s12">
-                                            <input id="last_name" type="text" required>
-                                            <label for="last_name">USERNAME</label>
-                                        </div><br>
-
-                                        <div class="input-field col s12">
-                                            <input id="password" type="password" required>
-                                            <label for="password">PASSWORD</label>
-                                        </div>
-                                        <br>
-                                        <button type="submit" class="block button button5">LOG IN</button>
-                                    </div>
-                                    <br>
-                                    <div class="card-action center-align">
-                                        <a href="#" class="grey-text text-darken-2">
-                          Forgot password?
-                    </a>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+        <div class="modal-content" id="login-modal">
+            <form action="login.php" method="GET">
+                <div class="container center-align">
+                    <h2>Login</h2>
+                    <div class="input-field">
+                        <input id="username" type="text" name="username" required>
+                        <label for="username" class="black-text">Username</label>
                     </div>
+                    <div class="input-field">
+                        <input id="password" type="password" name="password" required>
+                        <label for="password" class="black-text">Password</label>
+                    </div>
+                    <input class="blue waves-effect waves-light btn" type="submit" name="submit" value="Log In">
                 </div>
+            </form>
+            <div class="container center-align">
+                <p><strong>If you are new to project-park, then do Sign Up for uploading projects online for free</strong></p>
+                <a class="btn white-text blue darken-4" href="#">Sign Up</a>
             </div>
         </div>
     </div>
@@ -158,13 +95,14 @@
     <script>
         $(document).ready(function() {
             $('.sidenav').sidenav();
-        })
-        $('.dropdown-trigger').dropdown();
-    </script>
-    <script>
-        $(document).ready(function() {
+            $('.dropdown-trigger').dropdown({
+                constrainWidth: false,
+                coverTrigger: false,
+                inDuration: 1000,
+                outDuration: 1000
+            });
             $('.modal').modal();
-        })
+        });
     </script>
 </body>
 
