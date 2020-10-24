@@ -1,17 +1,19 @@
 <html>
 
 <head>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="./../css/newfileaddition.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Users</title>
 </head>
 
 <body>
+    <?php
+    require 'navbar.php';
+    ?>
     <div class="container">
-        <table class="centered responsive-table striped">
+        <h5 style="padding:10px; margin-top:50px; margin-bottom:100px;" class="blue darken-4 white-text center-align">
+            The data is sorted according to the total projects an individual user contributed to project-park app till now.</h5>
+        <table border="2" style="margin-bottom:100px;" class="centered responsive-table striped">
             <thead>
                 <tr>
                     <th>RANK</th>
@@ -49,6 +51,9 @@
             </tbody>
         </table>
     </div>
+    <?php
+        require 'footer.php';
+    ?>
 </body>
 
 </html>

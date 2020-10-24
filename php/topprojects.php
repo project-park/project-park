@@ -1,23 +1,26 @@
 <html>
 
 <head>
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="./../css/newfileaddition.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Projects</title>
 </head>
 
 <body>
+    <?php
+        require 'navbar.php';
+    ?>
     <div class="container">
-        <table class="centered highlight responsive striped light-green lighten-5" style="margin-top: 60px;">
+        <h5 style="padding:10px; margin-top:50px; margin-bottom:100px;" class="blue darken-4 white-text center-align">
+            The projects are sorted according to the total number of hotshots they got from authenticated users till now.</h5>
+        <table class="centered highlight responsive striped light-green lighten-5"
+            style="margin-bottom: 100px;">
             <thead class="green lighten-5 teal-text">
                 <tr>
                     <th>Rank</th>
                     <th>ProjectName</th>
                     <th>Creator</th>
-                    <th>Total Chickens Earned</th>
+                    <th>Total Hotshots Earned</th>
                 </tr>
             </thead>
 
@@ -55,6 +58,9 @@
             </tbody>
         </table>
     </div>
+    <?php
+        require 'footer.php';
+    ?>
 </body>
 
 </html>
