@@ -1,4 +1,6 @@
-#login-modal {
-    background-image: url('./../img/hero.png');
+#login-modal,
+#signup-modal,
+#setting-modal {
+    background-image: url('/img/hero.png');
     background-size: cover;
 }
