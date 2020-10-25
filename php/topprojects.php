@@ -8,7 +8,7 @@
 
 <body>
     <?php
-        require 'navbar.php';
+        require "$_SERVER[DOCUMENT_ROOT]/php/navbar.php";
     ?>
     <div class="container">
         <h5 style="padding:10px; margin-top:50px; margin-bottom:100px;" class="blue darken-4 white-text center-align">
@@ -59,7 +59,7 @@
         </table>
     </div>
     <?php
-        require 'footer.php';
+        require "$_SERVER[DOCUMENT_ROOT]/php/footer.php";
     ?>
 </body>
 
