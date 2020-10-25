@@ -1,5 +1,5 @@
 <?php
-require 'upper-link.php';
+require "$_SERVER[DOCUMENT_ROOT]/php/upper-link.php";
 ?>
 <link rel="stylesheet" href="/css/navbar.css">
 <nav class="nav-wraper blue-grey darken-3">
@@ -146,7 +146,7 @@ require 'upper-link.php';
 </div>
 
 <?php
-require 'lower-link.php';
+require "$_SERVER[DOCUMENT_ROOT]/php/lower-link.php";
 ?>
 
 

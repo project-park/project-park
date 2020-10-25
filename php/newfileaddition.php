@@ -8,7 +8,7 @@
 
 <body>
     <?php
-        require 'navbar.php';
+        require "$_SERVER[DOCUMENT_ROOT]/php/navbar.php";
     ?>
     <div class="container center-align">
         <h2>Dummy Project Name</h2>
@@ -43,7 +43,7 @@
     });
     </script>
     <?php
-        require 'footer.php';
+        require "$_SERVER[DOCUMENT_ROOT]/php/footer.php";
     ?>
 </body>
 
