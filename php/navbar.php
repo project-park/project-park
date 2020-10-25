@@ -4,14 +4,14 @@ require 'upper-link.php';
 <link rel="stylesheet" href="/css/navbar.css">
 <nav class="nav-wraper blue-grey darken-3">
     <div class="container">
-        <a href="#" class="brand-logo">Project Park</a>
+        <a href="/" class="brand-logo">Project Park</a>
         <a href="#" class="sidenav-trigger" data-target="mobile-links">
             <i class="material-icons">menu</i>
         </a>
         <ul class="right hide-on-med-and-down">
-            <li><a href="#" class="waves-effect">Home</a></li>
-            <li><a href="#" class="waves-effect">Top Projects</a></li>
-            <li><a href="#" class="waves-effect">Top Users</a></li>
+            <li><a href="/" class="waves-effect">Home</a></li>
+            <li><a href="/php/topprojects.php" class="waves-effect">Top Projects</a></li>
+            <li><a href="/php/topusers.php" class="waves-effect">Top Users</a></li>
             <li><a href="#logging" class="waves-effect modal-trigger">Login</a></li>
             <li>
                 <a href="#" class="btn-floating grey darken-4 z-depth-0 pulse">
@@ -44,25 +44,25 @@ require 'upper-link.php';
             <a href="#"><span class="white-text email">himanshu@gmail.com</span></a>
         </div>
     </li>
-    <li><a style="position:relative; top:-8px;" href="#" class="brand-logo blue white-text">Project Park</a></li>
+    <li><a style="position:relative; top:-8px;" href="/" class="brand-logo blue white-text">Project Park</a></li>
     <li><a class="subheader">Social & Community</a></li>
-    <li><a href="#" class="waves-effect">Home</a></li>
-    <li><a href="#" class="waves-effect">Top Projects</a></li>
-    <li><a href="#" class="waves-effect">Top Users</a></li>
+    <li><a href="/" class="waves-effect">Home</a></li>
+    <li><a href="/php/topprojects.php" class="waves-effect">Top Projects</a></li>
+    <li><a href="/php/topusers.php" class="waves-effect">Top Users</a></li>
+    <li><a href="#logging" class="waves-effect modal-trigger">Login</a></li>
+    <li><a href="#" class="waves-effect">Notifications</a></li>
     <li>
         <div class="divider"></div>
     </li>
-    <li><a href="#logging" class="waves-effect modal-trigger">Login</a></li>
-    <li><a href="#" class="waves-effect">Notifications</a></li>
     <li><a class="subheader" class="waves-effect">Your Account</a></li>
-    <li><a href="#" class="waves-effect">Your profile</a></li>
+    <li><a href="/php/profile.php" class="waves-effect">Your profile</a></li>
     <li><a href="#" class="waves-effect">Help</a></li>
     <li><a href="#settings" class="waves-effect modal-trigger">Settings</a></li>
     <li><a href="#" class="waves-effect">Log out</a></li>
 </ul>
 
 <ul class="dropdown-content" id="dropdown1">
-    <li><a href="#">Your profile</a></li>
+    <li><a href="/php/profile.php">Your profile</a></li>
     <li><a href="#">Help</a></li>
     <li><a href="#settings" class="modal-trigger">Settings</a></li>
     <li><a href="#">Log out</a></li>
