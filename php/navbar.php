@@ -1,5 +1,6 @@
 <?php
-require "$_SERVER[DOCUMENT_ROOT]/php/upper-link.php";
+    session_start();
+    require "$_SERVER[DOCUMENT_ROOT]/php/upper-link.php";
 ?>
 <link rel="stylesheet" href="/css/navbar.css">
 <nav class="nav-wraper blue-grey darken-3">
@@ -12,7 +13,12 @@ require "$_SERVER[DOCUMENT_ROOT]/php/upper-link.php";
             <li><a href="/" class="waves-effect">Home</a></li>
             <li><a href="/php/topprojects.php" class="waves-effect">Top Projects</a></li>
             <li><a href="/php/topusers.php" class="waves-effect">Top Users</a></li>
+
+            <?php
+            if(!isset($_SESSION['user_name'])) { ?>
             <li><a href="#logging" class="waves-effect modal-trigger">Login</a></li>
+            <?php } ?>
+
             <li>
                 <a href="#" class="btn-floating grey darken-4 z-depth-0 pulse">
                     <i class="material-icons ">notifications</i>
@@ -49,23 +55,47 @@ require "$_SERVER[DOCUMENT_ROOT]/php/upper-link.php";
     <li><a href="/" class="waves-effect">Home</a></li>
     <li><a href="/php/topprojects.php" class="waves-effect">Top Projects</a></li>
     <li><a href="/php/topusers.php" class="waves-effect">Top Users</a></li>
+
+    <?php
+            if(!isset($_SESSION['user_name'])) { ?>
     <li><a href="#logging" class="waves-effect modal-trigger">Login</a></li>
+    <?php } ?>
+
     <li><a href="#" class="waves-effect">Notifications</a></li>
     <li>
         <div class="divider"></div>
     </li>
     <li><a class="subheader" class="waves-effect">Your Account</a></li>
-    <li><a href="/php/profile.php" class="waves-effect">Your profile</a></li>
+
+    <?php
+    if(isset($_SESSION['user_name'])) { ?>
+    <li><a href="/php/profile.php" class="waves-effect">Your Profile</a></li>
+    <?php } ?>
+
     <li><a href="#" class="waves-effect">Help</a></li>
+
+    <?php
+    if(isset($_SESSION['user_name'])) { ?>
     <li><a href="#settings" class="waves-effect modal-trigger">Settings</a></li>
-    <li><a href="#" class="waves-effect">Log out</a></li>
+    <li><a href="/php/logout.php" class="waves-effect">Log out</a></li>
+    <?php } ?>
+
 </ul>
 
 <ul class="dropdown-content" id="dropdown1">
+
+    <?php
+    if(isset($_SESSION['user_name'])) { ?>
     <li><a href="/php/profile.php">Your profile</a></li>
+    <?php } ?>
+
     <li><a href="#">Help</a></li>
+
+    <?php
+    if(isset($_SESSION['user_name'])) { ?>
     <li><a href="#settings" class="modal-trigger">Settings</a></li>
-    <li><a href="#">Log out</a></li>
+    <li><a href="/php/logout.php">Log out</a></li>
+    <?php } ?>
 </ul>
 
 <div class="modal" id="logging">
