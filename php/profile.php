@@ -9,7 +9,7 @@
 
 <body class="teal lighten-2">
     <?php
-        require 'navbar.php';
+        require "$_SERVER[DOCUMENT_ROOT]/php/navbar.php";
     ?>
     <h2 class="center">User Name</h2>
     <h5 class="center"><u>Total Projects: 7</u></h5>
@@ -169,7 +169,7 @@
         </div>
     </div>
     <?php
-        require 'footer.php';
+        require "$_SERVER[DOCUMENT_ROOT]/php/footer.php";
     ?>
 </body>
 
