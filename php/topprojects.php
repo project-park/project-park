@@ -27,8 +27,8 @@
             <thead class="green lighten-5 teal-text">
                 <tr>
                     <th>Rank</th>
-                    <th>ProjectName</th>
-                    <th>Creator</th>
+                    <th>Project Name</th>
+                    <th>Project Creator</th>
                     <th>Total Hotshots Earned</th>
                 </tr>
             </thead>
