@@ -18,10 +18,12 @@
             $_SESSION['user_password'] = $detail[0]['user_password'];
             header('Location:/php/profile.php');
         } else {
+            $_SESSION['ErrorType'] = "Wrong Login Credentials";
             header('HTTP/1.1 307 Temporary Redirect');
             header('Location:/');
         }
     } else {
+        $_SESSION['ErrorType'] = "Illegal Login Link";
         header('Location:/');
     }
 ?>
