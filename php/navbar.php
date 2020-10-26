@@ -1,5 +1,4 @@
 <?php
-    session_start();
     require "$_SERVER[DOCUMENT_ROOT]/php/upper-link.php";
 ?>
 <link rel="stylesheet" href="/css/navbar.css">
