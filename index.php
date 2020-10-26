@@ -10,7 +10,7 @@
     Starting project here
     <?php
         echo "Hello World";
-        if(isset($_POST['submit'])) {
+        if(isset($_POST['email'])) {
           echo "$_POST[login_username]";
           echo "$_POST[login_password]";
         }
