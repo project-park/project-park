@@ -127,7 +127,7 @@
     <div class="modal-content" id="signup-modal">
         <form action="/php/signup.php" method="POST">
             <div class="container center-align">
-                <h2>Sign In</h2>
+                <h2>Sign Up</h2>
                 <div class="input-field">
                     <input id="signup-username" type="text" name="signup_username" required>
                     <label for="signup-username" class="black-text">Username</label>
@@ -141,10 +141,10 @@
                     <label for="signup-password" class="black-text">Password</label>
                 </div>
                 <div class="input-field">
-                    <input id="confirm-password" type="password" name="signup-conf-password" required>
+                    <input id="confirm-password" type="password" name="signup_conf_password" required>
                     <label for="confirm-password" class="black-text">Confirm Password</label>
                 </div>
-                <input class="blue waves-effect waves-light btn" type="submit" name="submit" value="Sign In">
+                <input class="blue waves-effect waves-light btn" type="submit" name="submit" value="Sign Up">
             </div>
         </form>
     </div>
