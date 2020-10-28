@@ -8,6 +8,7 @@
     $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 ?>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,8 +40,12 @@
 
                 <tr>
                     <td><?php echo ($i+1);                      ?></td>
-                    <td><?php echo $rows[$i]['project_name'];   ?></td>
-                    <td><?php echo $rows[$i]['user_name'];      ?></td>
+                    <td>
+                        <?php echo '<a target="_blank" href="'."/php/recursion.php?src=".$rows[$i]['user_name']."+".$rows[$i]['project_name'].'">'.$rows[$i]['project_name'].'</a>'?>
+                    </td>
+                    <td>
+                        <?php echo '<a target="_blank" href="'."/php/profile.php?profile=".$rows[$i]['user_name'].'">'.$rows[$i]['user_name'].'</a>'?>
+                    </td>
                     <td><?php echo $rows[$i]['project_stars'];  ?></td>
 
                     <?php
@@ -53,4 +58,5 @@
         require "$_SERVER[DOCUMENT_ROOT]/php/footer.php";
     ?>
 </body>
+
 </html>

@@ -110,7 +110,7 @@
                     <input id="login-password" type="password" name="login_password" required>
                     <label for="login-password" class="black-text">Password</label>
                 </div>
-                <input class="blue waves-effect waves-light btn" type="submit" name="submit" value="Log In">
+                <input class="blue btn" type="submit" name="submit" value="Log In">
             </div>
         </form>
         <div class="container center-align">
@@ -144,7 +144,7 @@
                     <input id="confirm-password" type="password" name="signup_conf_password" required>
                     <label for="confirm-password" class="black-text">Confirm Password</label>
                 </div>
-                <input class="blue waves-effect waves-light btn" type="submit" name="submit" value="Sign Up">
+                <input class="blue btn" type="submit" name="submit" value="Sign Up">
             </div>
         </form>
     </div>
@@ -152,7 +152,7 @@
 
 <div class="modal" id="settings">
     <div class="modal-content" id="setting-modal">
-        <form action="changepassword.php" method="POST">
+        <form action="/php/changepassword.php" method="POST">
             <div class="container center-align">
                 <h2 class>Change password</h2>
                 <div class="input-field">
