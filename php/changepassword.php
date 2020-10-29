@@ -6,18 +6,18 @@
         if($newPass!==$confPass) {
             $_SESSION['ErrorType'] = "Wrong Change Password Credentials(Not confirmed)";
             header('Location:/');
-        }
-        if($_SESSION['user_password']!==$oldPass) {
+        } else if($_SESSION['user_password']!==$oldPass) {
             $_SESSION['ErrorType'] = "Wrong Change Password Credentials(Wrong old password)";
             header('Location:/');
-        }
-        require "$_SERVER[DOCUMENT_ROOT]/php/dbconn.php";
+        } else {
+            require "$_SERVER[DOCUMENT_ROOT]/php/dbconn.php";
 
-        $sql = "UPDATE user_auth SET user_password=\"$newPass\" WHERE user_name=\"$_SESSION[user_name]\";";
-        $result = mysqli_query($conn, $sql);
-        
-        $_SESSION['user_password'] = $newPass;
-        header('Location:/php/profile.php');
+            $sql = "UPDATE user_auth SET user_password=\"$newPass\" WHERE user_name=\"$_SESSION[user_name]\";";
+            $result = mysqli_query($conn, $sql);
+            
+            $_SESSION['user_password'] = $newPass;
+            header('Location:/php/profile.php');
+        }
     } else {
         $_SESSION['ErrorType'] = "Illegal Change Password Link";
         header('Location:/');
