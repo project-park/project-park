@@ -49,7 +49,7 @@
             <?php
 
             $images = array('android.jpg','bootstrap.png','htmlcssjs.jpg','node.jpeg','php.jpg','react.png','swift.png');
-            
+            if(count($projects)>0) {
             $random_keys=array_rand($images,count($projects));
 
             for($i=0;$i<count($projects);$i++) { ?>
@@ -75,7 +75,7 @@
                 </div>
             </div>
 
-            <?php } ?>
+            <?php }} ?>
         </div>
     </div>
     <?php

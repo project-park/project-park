@@ -34,18 +34,14 @@
 
             <tbody>
                 <?php
-                    /*
-                    <tr>
-                    <td>1</td>
-                    <td>User_1</td>
-                    <td>5</td>
-                    </tr>
-                    */
+
                     for($i=0;$i<count($rows);$i++) { ?>
                 <tr>
-                    <td><?php echo ($i+1);                      ?></td>
-                    <td><?php echo $rows[$i]['user_name'];      ?></td>
-                    <td><?php echo $rows[$i]['total_projects']; ?></td>
+                    <td><?php echo ($i+1);   ?></td>
+                    <td>
+                        <?php echo '<a target="_blank" href="'."/php/profile.php?profile=".$rows[$i]['user_name'].'">'.$rows[$i]['user_name'].'</a>'?>
+                    </td>
+                    <td><?php echo $rows[$i]['total_projects'];  ?></td>
                 </tr>
                 <?php } ?>
             </tbody>
