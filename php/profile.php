@@ -61,6 +61,8 @@
                         <a href="#" class="btn-floating red pulse halfway-fab">
                             <i class="material-icons ">whatshot</i>
                         </a>
+                        <a href="#" class="btn-floating green halfway-fab left">5
+                        </a>
                     </div>
                     <div class="card-content">
                         <span class="card-title"><b><?php echo $projects[$i]['project_name']?></b></span>
