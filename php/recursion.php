@@ -70,24 +70,54 @@
                         echo "<li class=\"collection-item\"><i class=\"material-icons yellow-text left\">insert_drive_file</i><a href=\"/php/recursion.php?src=$send\">$childAlias</a></li>";
                     }
                 }
+                $sql = "SELECT * from `project_structure` WHERE child_name = \"$cd\";";
+                $result = mysqli_query($conn, $sql);
+                $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                
+                if(count($result) and $result[0]['res_type']=="file") {
+                    $filePath = "$_SERVER[DOCUMENT_ROOT]/files/$cd";
+                    if(file_exists($filePath)) {
+                        echo "<h6 class=\"center-align\">File size: ".filesize($filePath)."</h6>";
+                        if(filesize($filePath)) {
+                            echo "<div class=\"container\">Raw version(with htmlspecialchars)</div>";
+                            $handle = fopen($filePath, 'r');
+                            echo "<div class=\"container\" style=\"padding: 10px; border: 1px solid purple;\">";
+                            while(!feof($handle)) {
+                                echo htmlspecialchars(fgets($handle))."<br>"; ;
+                            }
+                            echo "</div>";
+                            fclose($handle);
+
+                            echo "<div class=\"container\">Formatted version(without htmlspecialchars)</div>";
+
+                            $handle = fopen($filePath, 'r');
+                            echo "<div class=\"container\" style=\"margin-bottom: 10px; padding: 10px; border: 1px solid purple;\">";
+                            while(!feof($handle)) {
+                                echo fgets($handle)."<br>";
+                            }
+                            echo "</div>";
+                            fclose($handle);
+                        }
+                    } else {
+                        echo "File Does Not Exist on Server: $cd";
+                    }
+                }
             ?>
         </ul>
-        <?php
-            $sql = "SELECT * from `project_structure` WHERE child_name = \"$cd\";";
-            
-            $result = mysqli_query($conn, $sql);
-            $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
-            
-            if(count($result) and $result[0]['res_type']=="file") {
-                
-                echo "<div style=\"padding: 10px; border: 1px solid purple;\" class=\"container\">        
-                turu file</div>";
-            }
-        ?>
     </div>
-    <div class="container right-align">
-        <a href="#" style="margin-bottom: 50px;" class="btn-small waves-effect waves-dark blue lighten-3 black-text"><i
-                class="material-icons black-text left">add</i>Add New File</a>
+    <div class="container center-align">
+        <a href="#" style="margin-bottom: 50px;" class="btn-small waves-effect waves-dark blue lighten-3 black-text">
+            <i class="material-icons black-text left">
+                add
+            </i>
+            Add New File
+        </a>
+        <a href="#" style="margin-bottom: 50px;" class="btn-small waves-effect waves-dark blue lighten-3 black-text">
+            <i class="material-icons black-text left">
+                add
+            </i>
+            Add New Directory
+        </a>
     </div>
     <?php
         require "$_SERVER[DOCUMENT_ROOT]/php/footer.php";
