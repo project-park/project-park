@@ -2,7 +2,7 @@
     require "$_SERVER[DOCUMENT_ROOT]/php/upper-link.php";
 ?>
 <link rel="stylesheet" href="/css/navbar.css">
-<nav class="nav-wraper blue-grey darken-3">
+<nav class="nav-wrapper blue-grey darken-3">
     <div class="container">
         <a href="/" class="brand-logo">Project Park</a>
         <a href="#" class="sidenav-trigger" data-target="mobile-links">
