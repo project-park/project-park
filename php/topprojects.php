@@ -41,10 +41,14 @@
                 <tr>
                     <td><?php echo ($i+1);                      ?></td>
                     <td>
-                        <?php echo '<a target="_blank" href="'."/php/recursion.php?src=".$rows[$i]['user_name']."+".$rows[$i]['project_name'].'">'.$rows[$i]['project_name'].'</a>'?>
+                        <?php
+                        $userName = $rows[$i]['user_name'];
+                        $projectName = $rows[$i]['project_name']; 
+                        $link = urlencode($userName."+".$projectName);
+                        echo "<a target=\"_blank\" href=\"/php/recursion.php?src=$link\">$projectName</a>"?>
                     </td>
                     <td>
-                        <?php echo '<a target="_blank" href="'."/php/profile.php?profile=".$rows[$i]['user_name'].'">'.$rows[$i]['user_name'].'</a>'?>
+                        <?php echo "<a target=\"_blank\" href=\"/php/profile.php?profile=$userName\">$userName</a> "; ?>
                     </td>
                     <td><?php echo $rows[$i]['project_stars'];  ?></td>
 

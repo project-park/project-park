@@ -1,5 +1,41 @@
+<?php
+    if(!isset($_GET['src'])) {
+        header('Location:/');
+    } else {
+        $cd = htmlspecialchars($_GET['src']);
+        require "$_SERVER[DOCUMENT_ROOT]/php/dbconn.php";
+        
+        $sql = "SELECT * FROM `project_structure` where res_name=\"$cd\"";
+        
+        $result = mysqli_query($conn, $sql);
+        $result = mysqli_fetch_all($result,MYSQLI_ASSOC);
+        
+        $firstPlusIndex = strpos($cd,"+");
+        $secondPlusIndex = strpos($cd,"+",$firstPlusIndex+1);
+        $lastPlusIndex = strrpos($cd,"+");
+        $projectOwner = substr($cd,0,$firstPlusIndex);
+        $projectName = "";
+        if($secondPlusIndex=="") {
+            $projectName = substr($cd,$firstPlusIndex+1);
+        } else {
+            $projectName = substr($cd,$firstPlusIndex+1,$secondPlusIndex-$firstPlusIndex-1);
+        }
+        $deepestRes = substr($cd,$lastPlusIndex+1);
+        $projectLink = str_replace("+","=>",substr($cd,$firstPlusIndex+1));
+        /*
+        echo "First occurence of + : ".$firstPlusIndex."<br>";
+        echo "Second occurence of + : ".$secondPlusIndex."<br>";
+        echo "Last occurence of + : ".$lastPlusIndex."<br>";
+        echo "For ownerName : ".$projectOwner."<br>";
+        echo "For projectName : ".$projectName."<br>";
+        echo "For deepestRes : ".$deepestRes."<br>";
+        echo "Project Link : ".$projectLink."<br>";
+        */
+    }
+?>
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,27 +47,46 @@
         require "$_SERVER[DOCUMENT_ROOT]/php/navbar.php";
     ?>
     <div class="container left-align">
-        <h3 class="blue-text">
-            Project-name
+        <h3 class="indigo-text">
+            <?php echo "Project : $projectName by <a target=\"_blank\" style=\"color:red;\" href=\"/php/profile.php?profile=$projectOwner\">$projectOwner</a>";?>
         </h3>
     </div>
     <hr>
-    <div class="container">
+    <div style="padding: 1% 10%;" class="container">
         <ul class="collection with-header">
             <li class="collection-header light-blue lighten-5">
-                <span>Project Directory</span>
+                <span><?php echo "Project Directory: $projectLink";?></span>
             </li>
-            <li class="collection-item "><i class="material-icons blue-text  left">folder</i>Folders</li>
-            <li class="collection-item"><i class="material-icons blue-text left">folder</i>Folders</li>
-            <li class="collection-item"><i class="material-icons blue-text left">folder</i>Folders</li>
-            <li class="collection-item"><i class="material-icons yellow-text left">insert_drive_file</i>items</li>
-            <li class="collection-item"><i class="material-icons yellow-text left">insert_drive_file</i>items</li>
-            <li class="collection-item"><i class="material-icons yellow-text left">insert_drive_file</i>items</li>
-            <li class="collection-item"><i class="material-icons yellow-text left">insert_drive_file</i>items</li>
+            <?php 
+                for($i=0;$i<count($result);$i++) {
+                    $resType = $result[$i]['res_type'];
+                    $childName = $result[$i]['child_name'];
+                    $send = urlencode($childName);
+                    $lastPIndex = strrpos($childName,"+");
+                    $childAlias = substr($childName,$lastPIndex+1);
+                    if($resType == "dir") {
+                        echo "<li class=\"collection-item\"><i class=\"material-icons blue-text left\">folder</i><a href=\"/php/recursion.php?src=$send\">$childAlias</a></li>";
+                    } else {
+                        echo "<li class=\"collection-item\"><i class=\"material-icons yellow-text left\">insert_drive_file</i><a href=\"/php/recursion.php?src=$send\">$childAlias</a></li>";
+                    }
+                }
+            ?>
         </ul>
+        <?php
+            $sql = "SELECT * from `project_structure` WHERE child_name = \"$cd\";";
+            
+            $result = mysqli_query($conn, $sql);
+            $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            
+            if(count($result) and $result[0]['res_type']=="file") {
+                
+                echo "<div style=\"padding: 10px; border: 1px solid purple;\" class=\"container\">        
+                turu file</div>";
+            }
+        ?>
     </div>
     <div class="container right-align">
-        <a href="#" class="btn-small waves-effect waves-dark blue lighten-3 black-text"><i
+        <a href="#" style="margin-bottom: 50px;" class="btn-small waves-effect waves-dark blue lighten-3 black-text"><i
                 class="material-icons black-text left">add</i>Add New File</a>
     </div>
     <?php
