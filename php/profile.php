@@ -51,7 +51,7 @@
             $images = array('android.jpg','bootstrap.png','htmlcssjs.jpg','node.jpeg','php.jpg','react.png','swift.png');
             if(count($projects)>0) {
             $random_keys=array_rand($images,count($projects));
-
+            shuffle($projects);
             for($i=0;$i<count($projects);$i++) { ?>
 
             <div class="col s12 m6 l4">
@@ -61,7 +61,8 @@
                         <a href="#" class="btn-floating red pulse halfway-fab">
                             <i class="material-icons ">whatshot</i>
                         </a>
-                        <a href="#" class="btn-floating green halfway-fab left">5
+                        <a href="#" style="" class="btn-floating green halfway-fab left">
+                            <?php echo $projects[$i]['project_stars'];?>
                         </a>
                     </div>
                     <div class="card-content">
@@ -69,8 +70,20 @@
                         <p>One-liner description is what we all crave for:)</p>
                     </div>
                     <div class="card-action">
-                        <a class="purple-text" href="#"><strong>Fork this project</strong></a>
-                        <a class="purple-text" href="#"><strong>Show More</strong></a>
+                        <a class="purple-text" href="#">
+                            <strong>
+                                Trick Project
+                            </strong>
+                        </a>
+                        <?php
+                            $link = urlencode($profile."+".$projects[$i]['project_name']);
+                        ?>
+                        <a class="purple-text" target="_blank" 
+                        <?php echo "href=\"/php/recursion.php?src=$link\""; ?>>
+                            <strong>
+                                Show Project
+                            </strong>
+                        </a>
                     </div>
                 </div>
             </div>
