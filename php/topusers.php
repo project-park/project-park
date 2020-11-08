@@ -1,7 +1,7 @@
 <?php
     require "$_SERVER[DOCUMENT_ROOT]/php/dbconn.php";
     
-    $sql = "SELECT user_name,count(*) as total_projects FROM user_projects GROUP BY user_name ORDER BY total_projects DESC LIMIT 3;";
+    $sql = "SELECT user_name,count(*) as total_projects FROM user_projects GROUP BY user_name ORDER BY total_projects DESC LIMIT 5;";
 
     $result = mysqli_query($conn,$sql);
     

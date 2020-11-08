@@ -198,6 +198,12 @@
     <script>
     $(document).ready(function() {
         $('.modal').modal();
+        <?php
+            if(isset($_SESSION["ErrorType"])) {
+                echo "alert(\"$_SESSION[ErrorType]\");";
+                unset($_SESSION["ErrorType"]);
+            }
+        ?>
     });
     </script>
 </body>
