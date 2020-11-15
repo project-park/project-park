@@ -79,24 +79,25 @@
                     if(file_exists($filePath)) {
                         echo "<h6 class=\"center-align\">File size: ".filesize($filePath)."</h6>";
                         if(filesize($filePath)) {
-                            echo "<div class=\"container\">Raw version(with htmlspecialchars)</div>";
+                            echo "<div style=\"margin:30px;\">";
+                            echo "<h4>Raw version(with htmlspecialchars)</h4>";
                             $handle = fopen($filePath, 'r');
-                            echo "<div class=\"container\" style=\"padding: 10px; border: 1px solid purple;\">";
+                            echo "<div style=\"padding: 10px; border: 1px solid purple;\">";
                             while(!feof($handle)) {
                                 echo htmlspecialchars(fgets($handle))."<br>"; ;
                             }
                             echo "</div>";
                             fclose($handle);
 
-                            echo "<div class=\"container\">Formatted version(without htmlspecialchars)</div>";
-
-                            $handle = fopen($filePath, 'r');
-                            echo "<div class=\"container\" style=\"margin-bottom: 10px; padding: 10px; border: 1px solid purple;\">";
-                            while(!feof($handle)) {
-                                echo fgets($handle)."<br>";
-                            }
+                            echo "<h4>Formatted version(without htmlspecialchars)</h4>"; 
+                            echo "
+                            <div class=\"center-align\">
+                                <a class=\"btn blue yellow-text text-lighten-3\" href=\"./../files/$cd\" target=\"_blank\">
+                                <i class=\"material-icons left\">exit_to_app</i>
+                                Open File(Unsafe: Might contain malicious scripts)</a>
+                            </div>
+                            ";
                             echo "</div>";
-                            fclose($handle);
                         }
                     } else {
                         echo "File Does Not Exist on Server: $cd";
