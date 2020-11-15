@@ -1,0 +1,11 @@
+("himanshu+Natours","himanshu+Natours+css","dir"),
+("himanshu+Natours","himanshu+Natours+img","dir"),
+("himanshu+Natours","himanshu+Natours+index.html","file"),
+("himanshu+Natours","himanshu+Natours+package.json","file"),
+("himanshu+Natours+css","himanshu+Natours+css+fonts","dir"),
+("himanshu+Natours+css","himanshu+Natours+css+style.css","file"),
+("himanshu+Natours+css+fonts","himanshu+Natours+css+fonts+linea-basic-10.ttf","file"),
+("himanshu+Natours+img","himanshu+Natours+img+favicon.png","file"),
+("himanshu+Natours+img","himanshu+Natours+img+hero.jpg","file"),
+("himanshu+Natours+img","himanshu+Natours+img+logo-white.png","file"),
+("himanshu+Natours+img","himanshu+Natours+img+logo-green-1x.png","file")
