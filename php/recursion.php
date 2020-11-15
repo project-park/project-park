@@ -58,6 +58,7 @@
                 <span><?php echo "Project Directory: $projectLink";?></span>
             </li>
             <?php 
+                $listItems = "";
                 for($i=0;$i<count($result);$i++) {
                     $resType = $result[$i]['res_type'];
                     $childName = $result[$i]['child_name'];
@@ -65,11 +66,12 @@
                     $lastPIndex = strrpos($childName,"+");
                     $childAlias = substr($childName,$lastPIndex+1);
                     if($resType == "dir") {
-                        echo "<li class=\"collection-item\"><i class=\"material-icons blue-text left\">folder</i><a href=\"/php/recursion.php?src=$send\">$childAlias</a></li>";
+                        $listItems = "<li class=\"collection-item\"><i class=\"material-icons blue-text left\">folder</i><a href=\"/php/recursion.php?src=$send\">$childAlias</a></li>".$listItems;
                     } else {
-                        echo "<li class=\"collection-item\"><i class=\"material-icons yellow-text left\">insert_drive_file</i><a href=\"/php/recursion.php?src=$send\">$childAlias</a></li>";
+                        $listItems = $listItems."<li class=\"collection-item\"><i class=\"material-icons yellow-text left\">insert_drive_file</i><a href=\"/php/recursion.php?src=$send\">$childAlias</a></li>";
                     }
                 }
+                echo $listItems;
                 $sql = "SELECT * from `project_structure` WHERE child_name = \"$cd\";";
                 $result = mysqli_query($conn, $sql);
                 $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -92,9 +94,9 @@
                             echo "<h4>Formatted version(without htmlspecialchars)</h4>"; 
                             echo "
                             <div class=\"center-align\">
-                                <a class=\"btn blue yellow-text text-lighten-3\" href=\"./../files/$cd\" target=\"_blank\">
-                                <i class=\"material-icons left\">exit_to_app</i>
-                                Open File(Unsafe: Might contain malicious scripts)</a>
+                                <a class=\"btn red yellow-text text-lighten-3\" href=\"./../files/$cd\" target=\"_blank\">
+                                <i class=\"material-icons right\">launch</i>
+                                Open File (Unsafe: Might contain malicious scripts)</a>
                             </div>
                             ";
                             echo "</div>";
@@ -106,20 +108,25 @@
             ?>
         </ul>
     </div>
-    <div class="container center-align">
-        <a href="#" style="margin-bottom: 50px;" class="btn-small waves-effect waves-dark blue lighten-3 black-text">
+    <?php
+        if(count($result)==0 or $result[0]['res_type']=='dir') { 
+        $resLink = urlencode($cd);
+    ?>
+    <div class="container center-align" style="margin-bottom: 50px;">
+        <a <?php echo "href=\"./newfileaddition.php?src=$resLink\"" ?> class="btn-small waves-effect waves-dark blue lighten-3 black-text">
             <i class="material-icons black-text left">
                 add
             </i>
             Add New File
         </a>
-        <a href="#" style="margin-bottom: 50px;" class="btn-small waves-effect waves-dark blue lighten-3 black-text">
+        <a <?php echo "href=\"./newdiraddition.php?src=$resLink\"" ?> class="btn-small waves-effect waves-dark blue lighten-3 black-text">
             <i class="material-icons black-text left">
                 add
             </i>
             Add New Directory
         </a>
     </div>
+    <?php } ?>
     <?php
         require "$_SERVER[DOCUMENT_ROOT]/php/footer.php";
     ?>
