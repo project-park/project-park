@@ -1,0 +1,18 @@
+INSERT INTO project_structure
+VALUES
+("himanshu+Trillo","himanshu+Trillo+css","dir"),
+("himanshu+Trillo","himanshu+Trillo+img","dir"),
+("himanshu+Trillo","himanshu+Trillo+index.html","file"),
+("himanshu+Trillo","himanshu+Trillo+package.json","file"),
+("himanshu+Trillo+css","himanshu+Trillo+css+style.css","file"),
+("himanshu+Trillo+img","himanshu+Trillo+img+SVG","dir"),
+("himanshu+Trillo+img","himanshu+Trillo+img+favicon.png","file"),
+("himanshu+Trillo+img","himanshu+Trillo+img+logo.png","file"),
+("himanshu+Trillo+img","himanshu+Trillo+img+user.jpg","file"),
+("himanshu+Trillo+img","himanshu+Trillo+img+user-1.jpg","file"),
+("himanshu+Trillo+img","himanshu+Trillo+img+user-2.jpg","file"),
+("himanshu+Trillo+img","himanshu+Trillo+img+user-3.jpg","file"),
+("himanshu+Trillo+img","himanshu+Trillo+img+user-4.jpg","file"),
+("himanshu+Trillo+img+SVG","himanshu+Trillo+img+SVG+chat.svg","file"),
+("himanshu+Trillo+img+SVG","himanshu+Trillo+img+SVG+bookmarks.svg","file"),
+("himanshu+Trillo+img+SVG","himanshu+Trillo+img+SVG+home.svg","file");

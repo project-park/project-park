@@ -1,0 +1,15 @@
+INSERT INTO project_structure
+VALUES
+("adarsh+pro2","adarsh+pro2+dir1","dir"),
+("adarsh+pro2","adarsh+pro2+dir2","dir"),
+("adarsh+pro2+dir1","adarsh+pro2+dir1+dir1.1","dir"),
+("adarsh+pro2+dir1","adarsh+pro2+dir1+dir1.2","dir"),
+("adarsh+pro2+dir1","adarsh+pro2+dir1+file1.1.html","file"),
+("adarsh+pro2+dir1","adarsh+pro2+dir1+file1.2.html","file"),
+("adarsh+pro2+dir1+dir1.1","adarsh+pro2+dir1+dir1.1+file1.1.1.html","file"),
+("adarsh+pro2+dir1+dir1.1","adarsh+pro2+dir1+dir1.1+file1.1.2.html","file"),
+("adarsh+pro2+dir1+dir1.2","adarsh+pro2+dir1+dir1.2+file1.2.1.html","file"),
+("adarsh+pro2+dir2","adarsh+pro2+dir2+dir2.1","dir"),
+("adarsh+pro2+dir2","adarsh+pro2+dir2+file2.1.html","file"),
+("adarsh+pro2+dir2+dir2.1","adarsh+pro2+dir2+dir2.1+file2.1.1.html","file"),
+("adarsh+pro2+dir2+dir2.1","adarsh+pro2+dir2+dir2.1+file2.1.2.html","file");

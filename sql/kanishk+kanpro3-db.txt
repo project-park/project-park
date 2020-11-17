@@ -1,0 +1,5 @@
+INSERT INTO project_structure
+VALUES
+("kanishk+kanpro3","kanishk+kanpro3+dir1","dir"),
+("kanishk+kanpro3","kanishk+kanpro3+file1.html","file"),
+("kanishk+kanpro3+dir1","kanishk+kanpro3+dir1+file1.1.html","file");
