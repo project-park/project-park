@@ -3,7 +3,7 @@
         header('Location:/');
     } else {
         $cd = htmlspecialchars($_GET['src']);
-        require "$_SERVER[DOCUMENT_ROOT]/php/dbconn.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/dbutility/dbconn.php";
         
         $sql = "SELECT * FROM `project_structure` where res_name=\"$cd\"";
         
@@ -43,12 +43,12 @@
 
 <body>
     <?php
-        require "$_SERVER[DOCUMENT_ROOT]/php/navbar.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/navbar.php";
     ?>
     <div class="container center-align">
         <h2><?php echo $projectName;?></h2>
     </div>
-    <form action="/php/savedir.php" method="POST">
+    <form action="/php/utils/savedir.php" method="POST">
         
         <div class="container" style="margin-bottom: 20px;">
             <h5>Directory in which this sub-dir will be saved</h5>
@@ -78,7 +78,7 @@
     });
     </script>
     <?php
-        require "$_SERVER[DOCUMENT_ROOT]/php/footer.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/footer.php";
     ?>
 </body>
 

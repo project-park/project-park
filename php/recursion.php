@@ -3,7 +3,7 @@
         header('Location:/');
     } else {
         $cd = htmlspecialchars($_GET['src']);
-        require "$_SERVER[DOCUMENT_ROOT]/php/dbconn.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/dbutility/dbconn.php";
         
         $sql = "SELECT * FROM `project_structure` where res_name=\"$cd\"";
         
@@ -44,7 +44,7 @@
 
 <body>
     <?php
-        require "$_SERVER[DOCUMENT_ROOT]/php/navbar.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/navbar.php";
     ?>
     <div class="container left-align">
         <h3 class="indigo-text">
@@ -128,7 +128,7 @@
     </div>
     <?php } ?>
     <?php
-        require "$_SERVER[DOCUMENT_ROOT]/php/footer.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/footer.php";
     ?>
 </body>
 

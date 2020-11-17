@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Park</title>
     <?php
-      require "$_SERVER[DOCUMENT_ROOT]/php/upper-link.php";
+      require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/upper-link.php";
     ?>
     <style>
     body {
@@ -101,7 +101,7 @@
     <div class="section">
         <div id="div5" class="row container">
             <div class="col s12 l4">
-                <img class="responsive-img materialboxed" src="/img/dummyProject.png" />
+                <img class="responsive-img materialboxed" src="/img/projectHeirarchy.png" />
             </div>
             <div class="col s12 l7 offset-l1">
                 <h3 class="indigo-text text-darken-3">Project Heirarchy</h3>
@@ -110,7 +110,7 @@
         </div>
         <div id="div6" class="row container">
             <div class="col s12 l4 push-l8">
-                <img class="responsive-img materialboxed" src="/img/dummyProject.png" />
+                <img class="responsive-img materialboxed" src="/img/runtimeView.png" />
             </div>
             <div class="col s12 l7 pull-l4 right-align">
                 <h3 class="indigo-text text-darken-3">Runtime View(Beta)</h3>
@@ -119,7 +119,7 @@
         </div>
         <div id="div7" class="row container">
             <div class="col s12 l4">
-                <img class="responsive-img materialboxed" src="/img/dummyProject.png" />
+                <img class="responsive-img materialboxed" src="/img/projectHotshot.png" />
             </div>
             <div class="col s12 l7 offset-l1">
                 <h3 class="indigo-text text-darken-3">Project Hotshots(Beta-AJAX)</h3>
@@ -148,7 +148,7 @@
 
     <div class="modal" id="logging">
         <div class="modal-content" id="login-modal">
-            <form action="/php/login.php" method="POST">
+            <form action="/php/auth/login.php" method="POST">
                 <div class="container center-align">
                     <h2>Login</h2>
                     <div class="input-field">
@@ -167,7 +167,7 @@
 
     <div class="modal" id="signing">
         <div class="modal-content" id="signup-modal">
-            <form action="/php/signup.php" method="POST">
+            <form action="/php/auth/signup.php" method="POST">
                 <div class="container center-align">
                     <h2>Sign Up</h2>
                     <div class="input-field">
@@ -193,7 +193,7 @@
     </div>
 
     <?php
-        require "$_SERVER[DOCUMENT_ROOT]/php/lower-link.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/lower-link.php";
     ?>
     <script>
     $(document).ready(function() {
