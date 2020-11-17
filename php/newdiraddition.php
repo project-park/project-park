@@ -33,12 +33,12 @@
         */
     }
 ?>
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add a file to project</title>
+    <title>Add a dir to project</title>
 </head>
 
 <body>
@@ -46,11 +46,12 @@
         require "$_SERVER[DOCUMENT_ROOT]/php/navbar.php";
     ?>
     <div class="container center-align">
-    <h2><?php echo $projectName;?></h2>
+        <h2><?php echo $projectName;?></h2>
     </div>
-    <form action="/php/savefile.php" method="POST">
-        <div class="container" style="margin-bottom:20px;">
-        <h5>Directory in which this file will be saved</h5>
+    <form action="/php/savedir.php" method="POST">
+        
+        <div class="container" style="margin-bottom: 20px;">
+            <h5>Directory in which this sub-dir will be saved</h5>
             <div class="row">
                 <div class="input-field" style="width:30%">
                     <input id="dir-name" type="text" name="parent-dir" value=<?php echo "\"".str_replace("+","=>",$cd)."\"";?> readonly="readonly">
@@ -58,16 +59,11 @@
             </div>
             <div class="row">
                 <div class="input-field" style="width:30%">
-                    <input id="add-file-name" type="text" data-length="20" name="file-name" required>
-                    <label for="add-file-name">Add File Name</label>
+                    <input id="add-sub-dir-name" type="text" name="sub-dir" data-length="20" required>
+                    <label for="add-sub-dir-name">Add sub-directory Name</label>
                 </div>
             </div>
-            <p class="flow-text">Add code below</p>
-            <div class="input-field">
-                <textarea id="new_code" class="materialize-textarea" name="new-code"
-                    placeholder="Sample HTML Code" required></textarea>
-            </div>
-            <input class="btn green" type="submit" name="submit" value="Add File">
+            <input class="btn green" type="submit" name="submit" value="Add Dir">
             <a <?php echo "href=\"./recursion.php?src=".urlencode($cd)."\"";?> class="btn red">Cancel</a>
         </div>
     </form>
