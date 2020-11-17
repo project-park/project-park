@@ -57,7 +57,7 @@
             <div class="col s12 m6 l4">
                 <div class="card pink lighten-4 z-depth-5 hotshot-parent">
                     <div class="card-image hotshot-child1">
-                        <img src=<?php echo "/img/".$images[$random_keys[$i]]; ?> alt="ballu ji ki image">
+                        <img src=<?php echo "/img/".$images[$random_keys[$i]]; ?>>
                         <a class="btn-floating halfway-fab red pulse hotshot-child-icon">
                             <i class="material-icons" <?php echo "id=\"$i\""; ?>>whatshot</i>
                         </a>
@@ -102,7 +102,6 @@
     const iconList = document.querySelectorAll("div.hotshot-parent > div.hotshot-child1 > a.hotshot-child-icon");
     const numList = document.querySelectorAll("div.hotshot-parent > div.hotshot-child1 > a.hotshot-child-num");
     const projectList = document.querySelectorAll("div.hotshot-parent > div.hotshot-child2 > span");
-    console.log(projectList);
     for (i = 0; i < iconList.length; i++) {
         iconList[i].addEventListener("click", () => {
             try {

@@ -101,7 +101,7 @@
     <div class="section">
         <div id="div5" class="row container">
             <div class="col s12 l4">
-                <img class="responsive-img materialboxed" src="/img/dummyProject.png" />
+                <img class="responsive-img materialboxed" src="/img/projectHeirarchy.png" />
             </div>
             <div class="col s12 l7 offset-l1">
                 <h3 class="indigo-text text-darken-3">Project Heirarchy</h3>
@@ -110,7 +110,7 @@
         </div>
         <div id="div6" class="row container">
             <div class="col s12 l4 push-l8">
-                <img class="responsive-img materialboxed" src="/img/dummyProject.png" />
+                <img class="responsive-img materialboxed" src="/img/runtimeView.png" />
             </div>
             <div class="col s12 l7 pull-l4 right-align">
                 <h3 class="indigo-text text-darken-3">Runtime View(Beta)</h3>
@@ -119,7 +119,7 @@
         </div>
         <div id="div7" class="row container">
             <div class="col s12 l4">
-                <img class="responsive-img materialboxed" src="/img/dummyProject.png" />
+                <img class="responsive-img materialboxed" src="/img/projectHotshot.png" />
             </div>
             <div class="col s12 l7 offset-l1">
                 <h3 class="indigo-text text-darken-3">Project Hotshots(Beta-AJAX)</h3>

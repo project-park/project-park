@@ -42,7 +42,7 @@
     <li>
         <div class="user-view">
             <div class="background">
-                <img src="/img/ballu ji.jpg">
+                <img src="/img/mainbg.jpg" width="300px" height="160px">
             </div>
             <a href="#"><img class="circle" src="/img/himanshu.jpg"></a>
             <a href="#"><span class="white-text name">Himanshu Yadav</span></a>

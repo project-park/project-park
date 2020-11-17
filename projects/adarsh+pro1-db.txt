@@ -1,0 +1,10 @@
+("adarsh+pro1","adarsh+pro1+dir1","dir"),
+("adarsh+pro1","adarsh+pro1+dir2","dir"),
+("adarsh+pro1+dir1","adarsh+pro1+dir1+dir1.1","dir"),
+("adarsh+pro1+dir1","adarsh+pro1+dir1+file1.1.html","file"),
+("adarsh+pro1+dir1+dir1.1","adarsh+pro1+dir1+dir1.1+file1.1.1.html","file"),
+("adarsh+pro1+dir1+dir1.1","adarsh+pro1+dir1+dir1.1+file1.1.2.html","file"),
+("adarsh+pro1+dir2","adarsh+pro1+dir2+dir2.1","dir"),
+("adarsh+pro1+dir2","adarsh+pro1+dir2+file2.1.html","file"),
+("adarsh+pro1+dir2+dir2.1","adarsh+pro1+dir2+dir2.1+file2.1.1.html","file"),
+("adarsh+pro1+dir2+dir2.1","adarsh+pro1+dir2+dir2.1+file2.1.2.html","file")
