@@ -71,7 +71,10 @@
                     </div>
                     <div class="card-action">
                         <?php if($profile !== $_SESSION['user_name']) { ?>
-                        <a class="purple-text" href="#">
+                        <a class="purple-text"
+                        <?php 
+                            $projectLink = $projects[$i]['project_name'];
+                            echo "href=\"./copyProject.php?profile=$profile&project=$projectLink\""; ?>>
                             <strong>
                                 Trick Project
                             </strong>
