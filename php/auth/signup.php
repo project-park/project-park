@@ -10,7 +10,7 @@
             header('HTTP/1.1 307 Temporary Redirect');
             header('Location:/'); 
         } else {
-            require "$_SERVER[DOCUMENT_ROOT]/php/dbconn.php";
+            require "$_SERVER[DOCUMENT_ROOT]/php/dbutility/dbconn.php";
 
             $sql = "SELECT * FROM user_auth WHERE user_name=\"$uName\" OR user_email=\"$uEmail\";";
             $result = mysqli_query($conn, $sql);

@@ -3,7 +3,7 @@
         $uName = $_POST['login_username'];
         $uPass = $_POST['login_password'];
 
-        require "$_SERVER[DOCUMENT_ROOT]/php/dbconn.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/dbutility/dbconn.php";
 
         $sql = "SELECT * FROM user_auth WHERE user_name=\"$uName\" AND user_password=\"$uPass\"";
 

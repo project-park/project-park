@@ -5,7 +5,7 @@
     }
     
     $profile = "";
-    require "$_SERVER[DOCUMENT_ROOT]/php/dbconn.php";
+    require "$_SERVER[DOCUMENT_ROOT]/php/dbutility/dbconn.php";
 
     if(isset($_GET['profile'])) {
         $profile = $_GET['profile'];
@@ -40,7 +40,7 @@
 
 <body class="teal lighten-2">
     <?php
-        require "$_SERVER[DOCUMENT_ROOT]/php/navbar.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/navbar.php";
     ?>
     <h2 class="center"><?php echo $profile; ?></h2>
     <h5 class="center"><u>Total Projects: <?php echo count($projects); ?></u></h5>
@@ -74,7 +74,7 @@
                         <a class="purple-text"
                         <?php 
                             $projectLink = $projects[$i]['project_name'];
-                            echo "href=\"./copyProject.php?profile=$profile&project=$projectLink\""; ?>>
+                            echo "href=\"./utils/copyProject.php?profile=$profile&project=$projectLink\""; ?>>
                             <strong>
                                 Trick Project
                             </strong>
@@ -96,7 +96,7 @@
         </div>
     </div>
     <?php
-        require "$_SERVER[DOCUMENT_ROOT]/php/footer.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/footer.php";
     ?>
     <script>
     const iconList = document.querySelectorAll("div.hotshot-parent > div.hotshot-child1 > a.hotshot-child-icon");
@@ -109,7 +109,7 @@
                 reqProject = projectList[parseInt(event.target.id)];
                 projectName = reqProject.firstChild.innerHTML;
                 const xhr = new XMLHttpRequest();
-                xhr.open('GET', "./addHotShot.php?profile=" + <?php echo "\"$profile\""?> + "&project=" +
+                xhr.open('GET', "./utils/addHotShot.php?profile=" + <?php echo "\"$profile\""?> + "&project=" +
                     projectName, true);
                 xhr.onload = function() {
                     if (this.status === 200) {

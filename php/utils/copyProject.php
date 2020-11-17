@@ -5,7 +5,7 @@
     $parent = $ownerName."+".$projectName;
     $parentCopy = $copierName."+".$projectName;
     $queue[] = $parent;
-    require "$_SERVER[DOCUMENT_ROOT]/php/dbconn.php";
+    require "$_SERVER[DOCUMENT_ROOT]/php/dbutility/dbconn.php";
     $sql = "INSERT INTO user_projects VALUES(\"$copierName\",\"$projectName\",0);";
     mysqli_query($conn, $sql);
     while(count($queue)) {
@@ -27,7 +27,7 @@
             } else {
                 $sql = "INSERT INTO project_structure VALUES(\"$tempCopyParentName\",\"$tempCopyChildName\",\"file\");";
                 mysqli_query($conn, $sql);
-                copy("./../files/".$tempChildName,"./../files/".$tempCopyChildName);
+                copy("./../../files/".$tempChildName,"./../../files/".$tempCopyChildName);
             }
         }
     }

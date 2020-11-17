@@ -1,5 +1,5 @@
 <?php
-    require "$_SERVER[DOCUMENT_ROOT]/php/dbconn.php";
+    require "$_SERVER[DOCUMENT_ROOT]/php/dbutility/dbconn.php";
 
     $sql = "SELECT * FROM user_projects ORDER BY project_stars DESC LIMIT 5";
 
@@ -17,7 +17,7 @@
 
 <body>
     <?php
-        require "$_SERVER[DOCUMENT_ROOT]/php/navbar.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/navbar.php";
     ?>
 
     <div class="container">
@@ -59,7 +59,7 @@
         </table>
     </div>
     <?php
-        require "$_SERVER[DOCUMENT_ROOT]/php/footer.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/footer.php";
     ?>
 </body>
 

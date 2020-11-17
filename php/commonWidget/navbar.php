@@ -1,5 +1,5 @@
 <?php
-    require "$_SERVER[DOCUMENT_ROOT]/php/upper-link.php";
+    require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/upper-link.php";
 ?>
 <link rel="stylesheet" href="/css/navbar.css">
 <nav class="nav-wrapper blue-grey darken-3">
@@ -76,7 +76,7 @@
     <?php
     if(isset($_SESSION['user_name'])) { ?>
     <li><a href="#settings" class="waves-effect modal-trigger">Settings</a></li>
-    <li><a href="/php/logout.php" class="waves-effect">Log out</a></li>
+    <li><a href="/php/auth/logout.php" class="waves-effect">Log out</a></li>
     <?php } ?>
 
 </ul>
@@ -93,13 +93,13 @@
     <?php
     if(isset($_SESSION['user_name'])) { ?>
     <li><a href="#settings" class="modal-trigger">Settings</a></li>
-    <li><a href="/php/logout.php">Log out</a></li>
+    <li><a href="/php/auth/logout.php">Log out</a></li>
     <?php } ?>
 </ul>
 
 <div class="modal" id="logging">
     <div class="modal-content" id="login-modal">
-        <form action="/php/login.php" method="POST">
+        <form action="/php/auth/login.php" method="POST">
             <div class="container center-align">
                 <h2>Login</h2>
                 <div class="input-field">
@@ -125,7 +125,7 @@
 
 <div class="modal" id="signing">
     <div class="modal-content" id="signup-modal">
-        <form action="/php/signup.php" method="POST">
+        <form action="/php/auth/signup.php" method="POST">
             <div class="container center-align">
                 <h2>Sign Up</h2>
                 <div class="input-field">
@@ -152,7 +152,7 @@
 
 <div class="modal" id="settings">
     <div class="modal-content" id="setting-modal">
-        <form action="/php/changepassword.php" method="POST">
+        <form action="/php/auth/changepassword.php" method="POST">
             <div class="container center-align">
                 <h2 class>Change password</h2>
                 <div class="input-field">
@@ -175,7 +175,7 @@
 </div>
 
 <?php
-require "$_SERVER[DOCUMENT_ROOT]/php/lower-link.php";
+require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/lower-link.php";
 ?>
 
 

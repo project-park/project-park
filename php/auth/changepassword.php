@@ -10,7 +10,7 @@
             $_SESSION['ErrorType'] = "Wrong Change Password Credentials(Wrong old password)";
             header('Location:/');
         } else {
-            require "$_SERVER[DOCUMENT_ROOT]/php/dbconn.php";
+            require "$_SERVER[DOCUMENT_ROOT]/php/dbutility/dbconn.php";
 
             $sql = "UPDATE user_auth SET user_password=\"$newPass\" WHERE user_name=\"$_SESSION[user_name]\";";
             $result = mysqli_query($conn, $sql);

@@ -1,7 +1,7 @@
 <?php
     if(isset($_POST['submit'])) {
         $parent = str_replace('=>','+',($_POST['parent-dir']));
-        require "$_SERVER[DOCUMENT_ROOT]/php/dbconn.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/dbutility/dbconn.php";
         $child = $parent."+".$_POST['sub-dir'];
         $sql = "INSERT INTO project_structure VALUES (\"$parent\",\"$child\",\"dir\");";
         $result = mysqli_query($conn, $sql);

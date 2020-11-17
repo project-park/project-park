@@ -14,7 +14,7 @@
             </div>
             <div class="col s12 l2 center-align blue darken-4">
                 <?php
-                       require "$_SERVER[DOCUMENT_ROOT]/php/visitorcount.php";
+                       require "$_SERVER[DOCUMENT_ROOT]/php/utils/visitorcount.php";
                     ?>
             </div>
         </div>

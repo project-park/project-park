@@ -1,5 +1,5 @@
 <?php
-    require "$_SERVER[DOCUMENT_ROOT]/php/dbconn.php";
+    require "$_SERVER[DOCUMENT_ROOT]/php/dbutility/dbconn.php";
     
     $sql = "SELECT user_name,count(*) as total_projects FROM user_projects GROUP BY user_name ORDER BY total_projects DESC LIMIT 5;";
 
@@ -17,7 +17,7 @@
 
 <body>
     <?php
-    require "$_SERVER[DOCUMENT_ROOT]/php/navbar.php";
+    require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/navbar.php";
     ?>
     <div class="container">
         <h5 style="padding:10px; margin-top:50px; margin-bottom:100px;" class="blue darken-4 white-text center-align">
@@ -48,7 +48,7 @@
         </table>
     </div>
     <?php
-        require "$_SERVER[DOCUMENT_ROOT]/php/footer.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/footer.php";
     ?>
 </body>
 

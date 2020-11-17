@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST['submit'])) {
-        require "$_SERVER[DOCUMENT_ROOT]/php/dbconn.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/dbutility/dbconn.php";
         $parentName = str_replace('=>','+',($_POST['parent-dir']));
         $childName = $parentName."+".$_POST['file-name'];
         $childData = $_POST['new-code'];

@@ -15,7 +15,7 @@
 
 <body class="indigo darken-4">
     <?php
-        require "$_SERVER[DOCUMENT_ROOT]/php/navbar.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/navbar.php";
     ?>
     <div class="container center-align">
         <img class="responsive-img" id="meme-img" src="/img/aintmuch.jpg" alt="it ain't much meme photo">
@@ -113,7 +113,7 @@
         </div>
     </div>
     <?php
-        require "$_SERVER[DOCUMENT_ROOT]/php/footer.php";
+        require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/footer.php";
     ?>
 </body>
 
