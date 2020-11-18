@@ -195,6 +195,9 @@
     <?php
         require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/lower-link.php";
     ?>
+    <?php
+        require "$_SERVER[DOCUMENT_ROOT]/php/commonWidget/footer.php";
+    ?>
     <script>
     $(document).ready(function() {
         $('.modal').modal();
