@@ -44,6 +44,18 @@
     ?>
     <h2 class="center"><?php echo $profile; ?></h2>
     <h5 class="center"><u>Total Projects: <?php echo count($projects); ?></u></h5>
+    <?php
+        if($profile===$_SESSION['user_name']) { ?>
+    <div class="center-align">
+        <a <?php echo "href=\"newprojectaddition.php?creator=$profile\"";?>
+            class="btn-small center waves-effect waves-dark blue darken-3 white-text">
+            <i class="material-icons white-text left">
+                add
+            </i>
+            Add New Project
+        </a>
+    </div>
+    <?php } ?>
     <div class="container">
         <div class="row center-align">
             <?php
@@ -71,8 +83,7 @@
                     </div>
                     <div class="card-action">
                         <?php if($profile !== $_SESSION['user_name']) { ?>
-                        <a class="purple-text"
-                        <?php 
+                        <a class="purple-text" <?php 
                             $projectLink = $projects[$i]['project_name'];
                             echo "href=\"./utils/copyProject.php?profile=$profile&project=$projectLink\""; ?>>
                             <strong>

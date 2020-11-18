@@ -113,13 +113,13 @@
         $resLink = urlencode($cd);
     ?>
     <div class="container center-align" style="margin-bottom: 50px;">
-        <a <?php echo "href=\"./newfileaddition.php?src=$resLink\"" ?> class="btn-small waves-effect waves-dark blue lighten-3 black-text">
+        <a <?php echo "href=\"./newfileaddition.php?src=$resLink\""  ?> class="btn-small waves-effect waves-dark blue lighten-3 black-text" style="margin-top: 20px;">
             <i class="material-icons black-text left">
                 add
             </i>
             Add New File
         </a>
-        <a <?php echo "href=\"./newdiraddition.php?src=$resLink\"" ?> class="btn-small waves-effect waves-dark blue lighten-3 black-text">
+        <a <?php echo "href=\"./newdiraddition.php?src=$resLink\"" ?> class="btn-small waves-effect waves-dark blue lighten-3 black-text" style="margin-top: 20px;">
             <i class="material-icons black-text left">
                 add
             </i>
