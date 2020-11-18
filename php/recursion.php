@@ -58,7 +58,8 @@
                 <span><?php echo "Project Directory: $projectLink";?></span>
             </li>
             <?php 
-                $listItems = "";
+                $listFolders = [];
+                $listFiles = [];
                 for($i=0;$i<count($result);$i++) {
                     $resType = $result[$i]['res_type'];
                     $childName = $result[$i]['child_name'];
@@ -66,12 +67,19 @@
                     $lastPIndex = strrpos($childName,"+");
                     $childAlias = substr($childName,$lastPIndex+1);
                     if($resType == "dir") {
-                        $listItems = "<li class=\"collection-item\"><i class=\"material-icons blue-text left\">folder</i><a href=\"/php/recursion.php?src=$send\">$childAlias</a></li>".$listItems;
+                        $listFolders[] = "<li class=\"collection-item\"><i class=\"material-icons blue-text left\">folder</i><a href=\"/php/recursion.php?src=$send\">$childAlias</a></li>";
                     } else {
-                        $listItems = $listItems."<li class=\"collection-item\"><i class=\"material-icons yellow-text left\">insert_drive_file</i><a href=\"/php/recursion.php?src=$send\">$childAlias</a></li>";
+                        $listFiles[] = "<li class=\"collection-item\"><i class=\"material-icons yellow-text left\">insert_drive_file</i><a href=\"/php/recursion.php?src=$send\">$childAlias</a></li>";
                     }
                 }
-                echo $listItems;
+                sort($listFolders);
+                foreach ($listFolders as $dirs) {
+                    echo $dirs;
+                }
+                sort($listFiles);
+                foreach ($listFiles as $files) {
+                    echo $files;
+                }
                 $sql = "SELECT * from `project_structure` WHERE child_name = \"$cd\";";
                 $result = mysqli_query($conn, $sql);
                 $result = mysqli_fetch_all($result, MYSQLI_ASSOC);
