@@ -12,7 +12,7 @@
                     <p>The project was managed using <a href="https://trello.com/b/6H4HLH9X/development"
                             target="_blank">Trello</a></p>
             </div>
-            <div class="col s12 l2 center-align blue darken-4">
+            <div class="col s12 l2 center-align blue darken-4" style="padding:5px;">
                 <?php
                        require "$_SERVER[DOCUMENT_ROOT]/php/utils/visitorcount.php";
                     ?>
