@@ -2,7 +2,7 @@
     if(!isset($_GET['src'])) {
         header('Location:/');
     } else {
-        $cd = htmlspecialchars($_GET['src']);
+        $cd = $_GET['src'];
         require "$_SERVER[DOCUMENT_ROOT]/php/dbutility/dbconn.php";
         
         $sql = "SELECT * FROM `project_structure` where res_name=\"$cd\"";

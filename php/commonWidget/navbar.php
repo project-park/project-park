@@ -130,7 +130,7 @@
                 <h2>Sign Up</h2>
                 <div class="input-field">
                     <input id="signup-username" type="text" name="signup_username" required>
-                    <label for="signup-username" class="black-text">Username</label>
+                    <label for="signup-username" class="black-text">Username(Use characters(a-z,A-Z) and digits(0-9) only without spaces)</label>
                 </div>
                 <div class="input-field">
                     <input id="signup-email" type="email" name="signup_usermail" required>

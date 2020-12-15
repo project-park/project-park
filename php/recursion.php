@@ -10,6 +10,9 @@
         $result = mysqli_query($conn, $sql);
         $result = mysqli_fetch_all($result,MYSQLI_ASSOC);
         
+        //
+        print_r($sql);
+        print_r($result);
         $firstPlusIndex = strpos($cd,"+");
         $secondPlusIndex = strpos($cd,"+",$firstPlusIndex+1);
         $lastPlusIndex = strrpos($cd,"+");
