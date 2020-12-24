@@ -5,8 +5,6 @@
                 <h4>About The App</h5>
                     <p>The project is available at <a href="https://github.com/project-park/project-park"
                             target="_blank">GitHub</a></p>
-                    <p>The app is deployed with <em>automatic deployment feature</em> at <a
-                            href="https://www.heroku.com/home" target="_blank">Heroku</a></p>
                     <p>The backend is created using <a href="https://www.php.net/" target="_blank">PHP</a> with
                         MySQL-support</p>
                     <p>The project was managed using <a href="https://trello.com/b/6H4HLH9X/development"
