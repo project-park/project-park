@@ -13,8 +13,6 @@ Deployed at [000webhost.com](https://www.000webhost.com/)
 
 Project Management at [Trello](https://trello.com/b/6H4HLH9X/development)
 
-Live automatic deployment(without database) with Git CI at [Heroku](https://project-park.herokuapp.com/)
-
 ## Welcome to project-park
 Project Park is a web-based project programmed in PHP.
 It can be used to host
